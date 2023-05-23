@@ -4,14 +4,248 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="#242940"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/tv_ques_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quiz : 1/5"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30 min"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_alignParentEnd="true"
+            />
+
+
+    </RelativeLayout>
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        app:dividerColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        />
 
     <TextView
+        android:id="@+id/tv_Ques"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello World!"
-
-        android:textSize="30sp"
+        android:layout_height="wrap_content"
+        android:text="In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content."
+        android:textSize="22sp"
+        android:textColor="@color/white"
          />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        />
+    <RelativeLayout
+        android:id="@+id/rl_opt1"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/custom_tv_shape"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        >
+        <TextView
+            android:id="@+id/tv_serial_01"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="A"
+            android:layout_marginEnd="15dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_btn_bg"
+            />
+
+        <TextView
+            android:id="@+id/tv_opt_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tv_serial_01"
+            android:text="This is an option"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            />
+        <ImageView
+            android:id="@+id/check_opt1"
+            android:visibility="invisible"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_baseline_check_circle_24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:tint="@color/opt_color"
+            />
+    </RelativeLayout>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        />
+    <RelativeLayout
+        android:id="@+id/rl_opt2"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/custom_tv_shape"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        >
+        <TextView
+            android:id="@+id/tv_serial_02"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="B"
+            android:layout_marginEnd="15dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_btn_bg"
+            />
+
+        <TextView
+            android:id="@+id/tv_opt_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tv_serial_02"
+            android:text="This is an option"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            />
+        <ImageView
+            android:id="@+id/check_opt2"
+            android:visibility="invisible"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_baseline_check_circle_24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:tint="@color/opt_color"
+            />
+    </RelativeLayout>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        />
+    <RelativeLayout
+        android:id="@+id/rl_opt3"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/custom_tv_shape"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        >
+        <TextView
+            android:id="@+id/tv_serial_03"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="C"
+            android:layout_marginEnd="15dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_btn_bg"
+            />
+
+        <TextView
+            android:id="@+id/tv_opt_03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tv_serial_03"
+            android:text="This is an option"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            />
+        <ImageView
+            android:id="@+id/check_opt3"
+            android:visibility="invisible"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_baseline_check_circle_24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:tint="@color/opt_color"
+            />
+    </RelativeLayout>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        />
+    <RelativeLayout
+        android:id="@+id/rl_opt4"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/custom_tv_shape"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        >
+        <TextView
+            android:id="@+id/tv_serial_04"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="D"
+            android:layout_marginEnd="15dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:background="@drawable/custom_btn_bg"
+            />
+
+        <TextView
+            android:id="@+id/tv_opt_04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tv_serial_04"
+            android:text="This is an option"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            />
+        <ImageView
+            android:id="@+id/check_opt4"
+            android:visibility="invisible"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_baseline_check_circle_24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:tint="@color/opt_color"
+            />
+    </RelativeLayout>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        />
+    <Button
+        android:id="@+id/Next_btn"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/custom_next_btn_bg"
+        android:text="NEXT"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/opt_color"
+        />
 
 </LinearLayout>
