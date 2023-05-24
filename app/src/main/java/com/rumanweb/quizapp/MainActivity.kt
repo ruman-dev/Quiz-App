@@ -11,6 +11,7 @@ import android.widget.*
 class MainActivity : AppCompatActivity() {
 
     var index = 0
+    var rightAns = 0
     private val questions = listOf<ModelQuestion>(
         ModelQuestion(
             "WWW stands for","World Whole Web","Wide World Web","Web World Wide","World Wide Web","World Wide Web"
@@ -89,7 +90,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         Next_btn.setOnClickListener {
-            if(index < questions.size-1) {
+            if(!)
+
+
+
+            else if(index < questions.size-1) {
                 index++
 
             check_opt1.visibility = View.INVISIBLE
@@ -107,7 +112,7 @@ class MainActivity : AppCompatActivity() {
         }
         else{
             questions.forEach {
-                Log.d("ans", it.mUserSelectedAns)
+                if(it.mAns == it.mUserSelectedAns) rightAns++
             }
 
         }
