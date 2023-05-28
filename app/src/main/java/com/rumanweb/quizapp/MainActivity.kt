@@ -90,11 +90,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         Next_btn.setOnClickListener {
-            if(!)
-
-
-
-            else if(index < questions.size-1) {
+            if(index < questions.size-1) {
                 index++
 
             check_opt1.visibility = View.INVISIBLE
