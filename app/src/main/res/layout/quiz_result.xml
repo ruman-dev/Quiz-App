@@ -3,11 +3,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/custom_tv_shape"
-
+    android:background="#e78330"
+    android:gravity="center"
+    android:padding="35dp"
     >
 
         <TextView
+            android:id="@+id/tvQuizResult"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:text="Quiz Result"
@@ -15,26 +17,38 @@
             android:textSize="30sp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_marginTop="230dp"
-            android:layout_gravity="center"
             />
         <TextView
+            android:id="@+id/tvTotalQuestions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Selected Answer: "
+            android:text="Total Questions: 5"
             android:layout_gravity="center"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:layout_marginTop="10dp"
             />
         <TextView
+            android:id="@+id/tvRightAns"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Right Answer: "
-            android:layout_gravity="center"
+            android:text="Right Answer: 5"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:layout_marginTop="10dp"
+            />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            />
+        <Button
+            android:id="@+id/closeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CLOSE"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:textSize="18sp"
             />
 
 </LinearLayout>

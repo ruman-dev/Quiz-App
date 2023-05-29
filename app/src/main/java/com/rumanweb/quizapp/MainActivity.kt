@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Display.Mode
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,24 +16,56 @@ class MainActivity : AppCompatActivity() {
     var rightAns = 0
     private val questions = listOf<ModelQuestion>(
         ModelQuestion(
-            "WWW stands for","World Whole Web","Wide World Web","Web World Wide","World Wide Web","World Wide Web"
+            "WWW stands for",
+            "World Whole Web",
+            "Wide World Web",
+            "Web World Wide",
+            "World Wide Web",
+            "World Wide Web"
         ),
         ModelQuestion(
-            "Which of the following are components of Central Processing Unit (CPU) ?","Arithmetic logic unit,Mouse","Arithmetic logic unit, Control unit","Arithmetic logic unit, Integrated Circuits","Control Unit, Monitor","Arithmetic logic unit, Control unit"
+            "Which of the following are components of Central Processing Unit (CPU) ?",
+            "Arithmetic logic unit,Mouse",
+            "Arithmetic logic unit, Control unit",
+            "Arithmetic logic unit, Integrated Circuits",
+            "Control Unit, Monitor",
+            "Arithmetic logic unit, Control unit"
         ),
         ModelQuestion(
-            "Where is RAM located-","Expansion Board","External Drive","Mother Board","All of above","Mother Board"
+            "Where is RAM located-",
+            "Expansion Board",
+            "External Drive",
+            "Mother Board",
+            "All of above",
+            "Mother Board"
         ),
         ModelQuestion(
-            "If a computer has more than one processor then it is known as ?","Uniprocess","Multiprocessor","Multithreaded","Multiprogramming","Multiprocessor"
+            "If a computer has more than one processor then it is known as ?",
+            "Uniprocess",
+            "Multiprocessor",
+            "Multithreaded",
+            "Multiprogramming",
+            "Multiprocessor"
         ),
         ModelQuestion(
-            "If a computer provides database services to other, then it will be known as ?","Web server","Application server","Database server","FTP server","Database server"
+            "If a computer provides database services to other, then it will be known as ?",
+            "Web server",
+            "Application server",
+            "Database server",
+            "FTP server",
+            "Database server"
         )
     )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val builder = AlertDialog.Builder(this)
+        val resultView = LayoutInflater.from(this).inflate(R.layout.quiz_result,null,false)
+        builder.setView(resultView)
+        builder.setCancelable(false)
+        val alertDialog = builder.create()
+        val closebtn = resultView.findViewById<Button>(R.id.closeBtn)
 
         var rl_opt1: RelativeLayout = findViewById(R.id.rl_opt1)
         var rl_opt2: RelativeLayout = findViewById(R.id.rl_opt2)
@@ -108,10 +142,14 @@ class MainActivity : AppCompatActivity() {
         }
         else{
             questions.forEach {
-                if(it.mAns == it.mUserSelectedAns) rightAns++
-            }
+                alertDialog.show()
 
+            }
         }
     }
+        closebtn.setOnClickListener {
+            alertDialog.dismiss()
+        }
+
     }
 }
